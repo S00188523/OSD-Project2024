@@ -1,0 +1,55 @@
+<mat-card class="team-form-card">
+  <mat-card-content>
+    <form [formGroup]="teamForm" (ngSubmit)="onSubmit()" class="team-form">
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Team Name</mat-label>
+        <input matInput placeholder="Team" formControlName="name">
+        <mat-error *ngIf="teamForm.get('name')?.hasError('required')">Team Name is Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Venue</mat-label>
+        <input matInput placeholder="Venue" formControlName="venue">
+        <mat-icon matSuffix>location_on</mat-icon>
+        <mat-error *ngIf="teamForm.get('venue')?.hasError('required')">Venue is Required</mat-error>
+      </mat-form-field>
+      
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Venue Capacity</mat-label>
+        <input matInput placeholder="Capacity" formControlName="venueCapacity">
+        <mat-icon matSuffix>people</mat-icon>
+        <mat-error *ngIf="teamForm.get('venueCapacity')?.hasError('required')">Venue Capacity is Required</mat-error>
+        <mat-error *ngIf="teamForm.get('venueCapacity')?.hasError('invalidVenueCapacity')">Capacity must be greater than 10,000</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>League</mat-label>
+        <input matInput placeholder="League" formControlName="league">
+        <mat-icon matSuffix>sports_soccer</mat-icon>
+        <mat-error *ngIf="teamForm.get('league')?.hasError('required')">League is Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Kit Colour</mat-label>
+        <input matInput placeholder="Colour" formControlName="kitColour">
+        <mat-icon matSuffix>palette</mat-icon>
+        <mat-error *ngIf="teamForm.get('kitColour')?.hasError('required')">Kit Colour is Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Manager</mat-label>
+        <input matInput placeholder="Manager" formControlName="manager">
+        <mat-icon matSuffix>person</mat-icon>
+        <mat-error *ngIf="teamForm.get('manager')?.hasError('required')">Manager is Required</mat-error>
+      </mat-form-field>
+
+      <div class="button-container">
+        <button mat-raised-button color="warn" (click)="cancel()">Cancel</button>
+        <button mat-raised-button type="submit" color="primary" [disabled]="teamForm.invalid">Submit</button>
+      </div>
+
+    </form>
+  </mat-card-content>
+</mat-card>

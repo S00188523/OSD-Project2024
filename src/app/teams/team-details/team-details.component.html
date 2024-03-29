@@ -1,0 +1,28 @@
+<div class="message-container">
+    <p class="message">{{ message }}</p>
+  </div>
+  
+  <mat-card class="team-card" *ngIf="team && !showForm">
+    <mat-card-header>
+      <h2>{{ team.name }}</h2>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="team-info">
+        <div><strong>Venue:</strong> {{ team.venue }}</div>
+        <div><strong>Venue Capacity:</strong> {{ team.venueCapacity }}</div>
+        <div><strong>League:</strong> {{ team.league }}</div>
+        <div><strong>Kit Colour:</strong> {{ team.kitColour }}</div>
+        <div><strong>Manager:</strong> {{ team.manager }}</div>
+      </div>
+      <div class="button-group">
+        <button mat-raised-button color="warn" (click)="deleteTeam()">DELETE</button>
+        <button mat-raised-button color="accent" (click)="editTeam()">Edit</button>
+        <button mat-raised-button color="primary" (click)="back()">Back</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
+  <div *ngIf="showForm" class="form-container">
+    <app-team-form [team]="team"></app-team-form>
+  </div>
+  

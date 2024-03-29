@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+Premier League Team Information    
+<span class="toolbar-spacer"></span>
+    <ng-container *ngIf="isAuthenticated$ | async; else loggedOut">
+      <button mat-button (click)="handleLogOut()">Log out</button>
+    </ng-container>
+    <ng-template #loggedOut>
+      <button mat-button (click)="handleLogIn()">Log in</button>
+    </ng-template>
+    <button mat-button [matMenuTriggerFor]="menu"> 
+        Menu
+      </button> 
+    
+  </mat-toolbar>
+
+  <mat-menu #menu="matMenu"> 
+    <a mat-menu-item routerLink="/home" routerLinkActive="active">Home</a> 
+    <a mat-menu-item *ngIf="auth.user$ | async as user" routerLink="/profile" routerLinkActive="active">Profile</a> 
+    <a mat-menu-item *ngIf="auth.user$ | async as user" routerLink="/teams" routerLinkActive="active">Teams</a> 
+    
+  </mat-menu> 
+  
+
+<router-outlet></router-outlet>
+
+<ul *ngIf="auth.user$ | async as user" class="user-details">
+    <li>{{ user.name }}</li>
+    <li>{{ user.email }}</li>
+    <li><img *ngIf="user.picture" [src]="user.picture" alt="Profile Picture"/></li>
+  </ul>

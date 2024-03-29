@@ -1,0 +1,29 @@
+<div class="home-container">
+    <h2>Welcome to The Premier League Team Application</h2>
+  
+    <ng-container *ngIf="isLoggedIn; else notLoggedIn">
+      <div class="search-container">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="Search for a team" [(ngModel)]="searchQuery" (ngModelChange)="onSearch()">
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+  
+        <!-- Display the list of teams below the search bar -->
+        <div class="team-list" *ngIf="searchQuery.trim().length > 0">
+          <div *ngFor="let team of filteredTeams">
+            <!-- Takes User to team Details -->
+            <p (click)="onTeamNameClick(team._id)">{{ team.name }}</p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  
+    <ng-template #notLoggedIn>
+      <p>Please log in to use this service.</p>
+    </ng-template>
+  
+    <div class="image">
+      <img src="assets/prem-image.jpg"/>
+    </div>
+  </div>
+  

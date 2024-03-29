@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f0f8ff; 
+    padding: 20px; 
+  }
+  
+  .team-card {
+    width: 300px;
+    margin: 15px;
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .team-info {
+    margin-bottom: 10px;
+  }
+  
+  .team-info div {
+    margin-bottom: 5px;
+  }
+  
+  .add-team-button {
+    margin-top: 20px;
+  }
+  

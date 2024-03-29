@@ -1,0 +1,21 @@
+.team-form-card {
+    width: 400px;
+    margin: 20px auto;
+  }
+  
+  .team-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .button-container {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+  

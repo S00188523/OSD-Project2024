@@ -1,0 +1,25 @@
+<div class="container responsive-grid">
+    <div *ngFor='let t of teams$ | async; let i = index'>
+      <mat-card class="team-card">
+        <mat-card-header>
+          <mat-card-title>{{ t.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="team-info">
+            <div><strong>Venue:</strong> {{ t.venue }}</div>
+            <div><strong>Venue Capacity:</strong> {{ t.venueCapacity }}</div>
+            <div><strong>League:</strong> {{ t.league }}</div>
+            <div><strong>Kit Colour:</strong> {{ t.kitColour }}</div>
+            <div><strong>Manager:</strong> {{ t.manager }}</div>
+          </div>
+          <a mat-button color="primary" [routerLink]="['/teams', t._id]">View Details</a>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  
+  <a mat-raised-button color="accent" routerLink="/teams/form" class="add-team-button">
+    <mat-icon matprefix>add</mat-icon>
+    Add Team
+  </a>
+  
