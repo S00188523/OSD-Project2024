@@ -1,29 +1,43 @@
-.toolbar-spacer {
-    flex: 1 1 auto;
-  }
-
-  .active {
-    font-weight:bold;
-    text-decoration: underline;
+.navbar-card {
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+.pl-header-logo {
+  padding-top:30px;
+  padding-bottom:30px;
+  width: 100px; 
+  height: auto; 
 }
 
+.toolbar {
+  background-color: #37003c;
+  color: white;
+  height: 75px;
+}
 
-.user-details {
-    list-style: none;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    margin-top: 10px;
+.toolbar-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.nav-button {
+  color: white;
+}
+
+.menu-btns {
+  background-color: #3f51b5;
+}
+
+.burger-menu {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .burger-menu {
+    display: block;
   }
-  
-  .user-details li {
-    margin-bottom: 5px;
-  }
-  
-  .user-details img {
-    border-radius: 50%;
-    width: 150px; 
-    height: 150px; 
-    margin-right: 10px;
-  }
-  
+}

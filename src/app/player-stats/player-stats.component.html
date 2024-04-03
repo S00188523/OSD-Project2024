@@ -1,0 +1,28 @@
+<h3 class="table-heading">Top Scorers</h3>
+<table class="player-table">
+    <thead class="heading">
+      <tr>
+        <th>Rank</th>
+        <th></th>
+        <th>Player</th>
+        <th>Nationality</th>
+        <th>Team</th>
+        <th>Position</th>
+        <th>Apps.</th>
+        <th>Goals</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let player of playerStats; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td><img [src]="player.player.photo" alt="Player Photo" class="player-photo"></td>
+        <td>{{ player.player.firstname }} {{ player.player.lastname }}</td>
+        <td>{{ player.player.nationality }}</td>
+        <td>{{ player.statistics[0].team.name }}</td>
+        <td>{{ player.statistics[0].games.position }}</td>
+        <td>{{ player.statistics[0].games.appearences }}</td>
+        <td><strong>{{ player.statistics[0].goals.total }}</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  

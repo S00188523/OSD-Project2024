@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -15,12 +16,16 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { environment  } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
-
-import {AuthModule } from '@auth0/auth0-angular';
+import { MatIconModule } from '@angular/material/icon';
+import { AuthModule } from '@auth0/auth0-angular';
 import { AuthHttpInterceptor } from '@auth0/auth0-angular';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { TableComponent } from './table/table.component';
+import axios from 'axios';
+import { PlayerStatsComponent } from './player-stats/player-stats.component';
+import { ResultsComponent } from './results/results.component';
 
 
 
@@ -29,10 +34,14 @@ import { MatMenuModule } from '@angular/material/menu';
     AppComponent,
     HomeComponent,
     ProfileComponent,
+    TableComponent,
+    PlayerStatsComponent,
+    ResultsComponent
     
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
@@ -40,6 +49,7 @@ import { MatMenuModule } from '@angular/material/menu';
     TeamsModule,
     SharedModule,
     FormsModule,
+    MatIconModule,
     MatToolbarModule,
     MatDialogModule,
     MatSnackBarModule,

@@ -1,0 +1,56 @@
+<div class="results-container">
+    <!-- Display Past Results -->
+    <h3>Past Results</h3>
+    <table class="results-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Home Team</th>
+          <th>Away Team</th>
+          <th>Score</th>
+          <th>Status</th>
+          <th>Referee</th>
+          <th>Time</th>
+          <th>Attendance</th>
+          <th>Venue</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let match of matches">
+          <td>{{ match.date }}</td>
+          <td>{{ match['home-team'].name }}</td>
+          <td>{{ match['away-team'].name }}</td>
+          <td>{{ match['home-team'].score }} - {{ match['away-team'].score }}</td>
+          <td>{{ match.status.full }}</td>
+          <td>{{ match.referee }}</td>
+          <td>{{ match.time }}</td>
+          <td>{{ match.attendance }}</td>
+          <td>{{ match.venue }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Display Upcoming Fixtures -->
+    <h3>Upcoming Fixtures</h3>
+    <table class="fixtures-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Home Team</th>
+          <th>Away Team</th>
+          <th>Time</th>
+          <th>Venue</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fixture of fixtures">
+          <td>{{ fixture.date }}</td>
+          <td>{{ fixture['home-team'].name }}</td>
+          <td>{{ fixture['away-team'].name }}</td>
+          <td>{{ fixture.time }}</td>
+          <td>{{ fixture.venue }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
