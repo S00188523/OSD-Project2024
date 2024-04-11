@@ -10,7 +10,7 @@
       <button mat-raised-button class="nav-button" (click)="handleLogOut()">Log out</button>
     </ng-container>
     <ng-template #loggedOut>
-      <button mat-raised-button class="nav-button" (click)="handleLogIn()">Log in</button>
+      <button mat-raised-button class="nav-button" (click)="handleLogIn()">Admin Log in</button>
     </ng-template>
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
       <mat-icon>menu</mat-icon>
@@ -20,10 +20,22 @@
 
 <mat-menu #menu="matMenu" class="menu-btns">
   <button mat-menu-item class="nav-button" routerLink="/home" routerLinkActive="active">Home</button>
-  <button mat-menu-item class="nav-button" *ngIf="auth.user$ | async as user" routerLink="/table" routerLinkActive="active">Table</button>
-  <button mat-menu-item class="nav-button" *ngIf="auth.user$ | async as user" routerLink="/player-stats" routerLinkActive="active">Stats</button>
+  <button mat-menu-item class="nav-button" routerLink="/table" routerLinkActive="active">Table</button>
+  <button mat-menu-item class="nav-button" routerLink="/results-and-fixtures" routerLinkActive="active">Results & Fixtures</button>
+  <button mat-menu-item class="nav-button" routerLink="/player-stats" routerLinkActive="active">Stats</button>
   <button mat-menu-item class="nav-button" *ngIf="auth.user$ | async as user" routerLink="/profile" routerLinkActive="active">Profile</button>
   <button mat-menu-item class="nav-button" *ngIf="auth.user$ | async as user" routerLink="/teams" routerLinkActive="active">Teams</button>
 </mat-menu>
+
+
+<!-- <div class="footerCorporate" data-script="pl_footer" data-widget="footer-corporate">
+  <div class="wrapper col-12">
+      <div class="official">
+          <a href="/" class="footerCorporate__logo-container">
+              <img class="footerCorporate__logo" src="https://www.premierleague.com/resources/rebrand/v7.142.3/i/elements/pl-logo-full.svg" alt="Premier League">
+          </a>
+      </div>
+  </div>
+</div> -->
 
 <router-outlet></router-outlet>

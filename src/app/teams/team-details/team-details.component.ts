@@ -56,7 +56,6 @@ export class TeamDetailsComponent {
   
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        // User clicked "Yes", perform the delete operation
         this.deleteItem();
       } 
     });
@@ -65,7 +64,6 @@ export class TeamDetailsComponent {
   
   
   deleteItem() {
-    // Ensures that this.contact is not null or undefined before trying to access _id
     if (this.team && this.team._id) {
       this.teamService.deleteTeam(this.team._id)
         .subscribe({
@@ -87,12 +85,12 @@ export class TeamDetailsComponent {
   
   openErrorSnackBar(message: string): void {
     this.snackBar.open(message, 'Dismiss', {
-      duration: 15000, // Set the duration for how long the snackbar should be visible (in milliseconds)
-      panelClass: ['error-snackbar'], // You can define custom styles for the snackbar
+      duration: 15000, 
+      panelClass: ['error-snackbar'], 
     });
   }
   
   back(): void {
-    this.router.navigateByUrl('/teams');
+    this.router.navigateByUrl('/');
   }
 }

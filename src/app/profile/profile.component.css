@@ -1,22 +1,68 @@
+/* General styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Profile container styles */
 .profile-container {
-    padding: 20px;
-  }
-  
-  .user-details {
-    list-style: none;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
-  .user-details li {
-    margin-bottom: 5px;
-  }
-  
-  .profile-picture {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-  }
+  padding: 20px;
+}
+
+/* User details styles */
+.user-details {
+  list-style: none;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.user-details li {
+  margin-bottom: 5px;
+}
+
+/* Profile picture styles */
+.profile-picture {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+/* Button styles */
+.profile-container a {
+  display: block; /* Ensure the button occupies full width */
+  margin-top: 10px; /* Add some top margin */
+  text-align: center; /* Center the button text */
+}
+
+.footerCorporate {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #37003c;
+  color: #fff;
+  padding: 20px 0;
+  padding-top:10px
+}
+
+.footerCorporate .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+
+.footerCorporate a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footerCorporate__logo {
+  width: 120px;
+  height: auto;
+}

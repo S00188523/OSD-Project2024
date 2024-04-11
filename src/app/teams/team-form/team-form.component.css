@@ -1,21 +1,63 @@
 .team-form-card {
-    width: 400px;
-    margin: 20px auto;
+  width: 90%; /* Adjust the width for smaller screens */
+  max-width: 400px; /* Set a maximum width for larger screens */
+  margin: 20px auto;
+}
+
+.team-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.button-container {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column; /* Adjust the button layout for smaller screens */
+}
+
+.button-container button {
+  margin-bottom: 8px; /* Add some space between buttons */
+}
+
+.footerCorporate {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #37003c;
+  color: #fff;
+  padding: 20px 0;
+  padding-top:10px
+}
+
+.footerCorporate .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+
+.footerCorporate a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footerCorporate__logo {
+  width: 120px;
+  height: auto;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  .team-form-card {
+    width: 90%; /* Adjust the width for smaller screens */
   }
-  
-  .team-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-field {
-    width: 100%;
-    margin-bottom: 16px;
-  }
-  
-  .button-container {
-    margin-top: 16px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
+}

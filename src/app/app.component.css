@@ -36,8 +36,43 @@
   display: none;
 }
 
-@media (max-width: 600px) {
-  .burger-menu {
-    display: block;
+
+
+@media (max-width: 768px) {
+  .navbar-card {
+    margin: 10px;
+  }
+
+  .pl-header-logo {
+    width: 80px;
+    padding: 20px 0;
+  }
+
+  .toolbar-title {
+    font-size: 18px;
+  }
+
+  .footerCorporate .wrapper {
+    padding: 0 10px;
+  }
+
+  .footerCorporate__logo {
+    width: 100px;
+  }
+}
+
+/* Adjustments for even smaller screens */
+@media (max-width: 576px) {
+  .pl-header-logo {
+    width: 60px;
+    padding: 15px 0;
+  }
+
+  .toolbar-title {
+    font-size: 16px;
+  }
+
+  .footerCorporate__logo {
+    width: 80px;
   }
 }

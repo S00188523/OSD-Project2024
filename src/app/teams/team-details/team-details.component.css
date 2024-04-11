@@ -31,4 +31,47 @@
   .form-container {
     margin-top: 20px;
   }
+
+  .footerCorporate {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #37003c;
+    color: #fff;
+    padding: 20px 0;
+    padding-top:10px
+  }
+  
+  .footerCorporate .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  
+  .footerCorporate a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footerCorporate__logo {
+    width: 120px;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .team-card {
+      max-width: 300px; /* Adjust maximum width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .team-card {
+      max-width: 250px; /* Further adjust maximum width for even smaller screens */
+    }
+  }
   

@@ -1,3 +1,14 @@
+<div class="linkbtns">
+  <a mat-raised-button routerLink="/teams/form">
+    <mat-icon>add</mat-icon>
+    Add Team
+  </a>
+  <a mat-raised-button routerLink="/home">
+    <mat-icon>home</mat-icon>
+    Home
+  </a>
+</div>
+
 <div class="container responsive-grid">
     <div *ngFor='let t of teams$ | async; let i = index'>
       <mat-card class="team-card">
@@ -18,8 +29,14 @@
     </div>
   </div>
   
-  <a mat-raised-button color="accent" routerLink="/teams/form" class="add-team-button">
-    <mat-icon matprefix>add</mat-icon>
-    Add Team
-  </a>
+  <div class="footerCorporate" data-script="pl_footer" data-widget="footer-corporate">
+    <div class="wrapper col-12">
+        <div class="official">
+            <a href="/" class="footerCorporate__logo-container">
+                <img class="footerCorporate__logo" src="https://www.premierleague.com/resources/rebrand/v7.142.3/i/elements/pl-logo-full.svg" alt="Premier League">
+            </a>
+        </div>
+    </div>
+  </div>
+  
   

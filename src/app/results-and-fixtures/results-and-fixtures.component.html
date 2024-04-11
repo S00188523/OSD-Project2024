@@ -1,0 +1,33 @@
+<h2 class="table-heading">Results & Fixtures</h2>
+<div *ngIf="fixturesData && fixturesData.length > 0">
+    <table class="results-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Home Team</th>
+                <th>Score</th>
+                <th></th>
+                <th>Away Team</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fixture of fixturesData">
+                <td><img *ngIf="fixture.teams?.home?.logo" [src]="fixture.teams?.home?.logo" alt="{{ fixture.teams?.home?.name }}" height="50"></td>
+                <td>{{ fixture.teams?.home?.name }}</td>
+                <td>{{ fixture.goals?.home }} - {{ fixture.goals?.away }}</td>
+                <td><img *ngIf="fixture.teams?.away?.logo" [src]="fixture.teams?.away?.logo" alt="{{ fixture.teams?.away?.name }}" height="50"></td>
+                <td>{{ fixture.teams?.away?.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="footerCorporate" data-script="pl_footer" data-widget="footer-corporate">
+    <div class="wrapper col-12">
+        <div class="official">
+            <a href="/" class="footerCorporate__logo-container">
+                <img class="footerCorporate__logo" src="https://www.premierleague.com/resources/rebrand/v7.142.3/i/elements/pl-logo-full.svg" alt="Premier League">
+            </a>
+        </div>
+    </div>
+  </div>

@@ -1,5 +1,5 @@
 <div class="home-container">
-    <h2>Welcome to The Premier League Team Application</h2>
+  <h2 class="header">{{ isLoggedIn ? 'Admin Portal' : 'Welcome to The Premier League' }}</h2>
   
     <ng-container *ngIf="isLoggedIn; else notLoggedIn">
       <div class="search-container">
@@ -16,14 +16,42 @@
           </div>
         </div>
       </div>
+      <a mat-raised-button routerLink="/teams" class="link">
+        <mat-icon>list_alt</mat-icon>
+        Stored Teams
+      </a>
     </ng-container>
-  
-    <ng-template #notLoggedIn>
-      <p>Please log in to use this service.</p>
-    </ng-template>
   
     <div class="image">
       <img src="assets/prem-image.jpg"/>
     </div>
+
+    <ng-template #notLoggedIn>
+      <p>Stay up to date with the live Premier League app</p>
+    </ng-template>
+    
+      <div class="news-container">
+        <mat-card *ngFor="let item of displayedNews" class="news-card">
+            <h4 class="title"><a [href]="item.url" target="_blank">{{ item.title }}</a></h4>
+            <p>{{ item.short_desc }}</p>
+        </mat-card>
+      </div>
+
+      <div class="pagination">
+        <button mat-raised-button  (click)="showPreviousNews()" [disabled]="currentPage === 1">Previous</button>
+        <button mat-raised-button  (click)="showNextNews()" [disabled]="currentPage === totalPage">Next</button>
+      </div>    
+    
+
+</div>
+
+<div class="footerCorporate" data-script="pl_footer" data-widget="footer-corporate">
+  <div class="wrapper col-12">
+      <div class="official">
+          <a href="/" class="footerCorporate__logo-container">
+              <img class="footerCorporate__logo" src="https://www.premierleague.com/resources/rebrand/v7.142.3/i/elements/pl-logo-full.svg" alt="Premier League">
+          </a>
+      </div>
   </div>
+</div>
   

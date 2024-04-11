@@ -25,7 +25,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { TableComponent } from './table/table.component';
 import axios from 'axios';
 import { PlayerStatsComponent } from './player-stats/player-stats.component';
-import { ResultsComponent } from './results/results.component';
+import { ResultsAndFixturesComponent } from './results-and-fixtures/results-and-fixtures.component';
 
 
 
@@ -36,7 +36,7 @@ import { ResultsComponent } from './results/results.component';
     ProfileComponent,
     TableComponent,
     PlayerStatsComponent,
-    ResultsComponent
+    ResultsAndFixturesComponent
     
   ],
   imports: [
@@ -70,7 +70,8 @@ import { ResultsComponent } from './results/results.component';
             httpMethod: 'DELETE',
           },
         ]}
-      })
+      }),
+      
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthHttpInterceptor, multi: true },],
   bootstrap: [AppComponent]

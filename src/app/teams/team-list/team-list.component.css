@@ -26,3 +26,43 @@
     margin-top: 20px;
   }
   
+  .linkbtns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Add some bottom margin to separate the buttons from the cards */
+  }
+  
+  .linkbtns a {
+    margin: 0 10px; /* Adjust the spacing between buttons if needed */
+  }
+
+  .footerCorporate {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #37003c;
+    color: #fff;
+    padding: 20px 0;
+    padding-top:10px
+  }
+  
+  .footerCorporate .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  
+  .footerCorporate a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footerCorporate__logo {
+    width: 120px;
+    height: auto;
+  }
