@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/OSD-Project2024",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
