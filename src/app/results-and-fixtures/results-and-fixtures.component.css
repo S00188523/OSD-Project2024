@@ -1,21 +1,19 @@
-/* General styles */
 * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   
-  /* Table styles */
   .table-container {
-    overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
-    margin-bottom: 20px; /* Add some bottom margin */
+    overflow-x: auto; 
+    margin-bottom: 20px; 
   }
   
   .table-heading {
-    font-size: 24px; /* Adjust the font size as needed */
-    font-weight: bold; /* Make the text bold */
-    color: #37003c; /* Set the text color */
-    margin-bottom: 16px; /* Add some bottom margin for spacing */
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #37003c; 
+    margin-bottom: 16px; 
     margin-left: 5px;
   }
   

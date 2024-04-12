@@ -61,7 +61,6 @@
   }
 }
 
-/* Adjustments for even smaller screens */
 @media (max-width: 576px) {
   .pl-header-logo {
     width: 60px;

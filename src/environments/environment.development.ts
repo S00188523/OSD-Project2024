@@ -1,5 +1,5 @@
 export const environment = {
-    production: false,
+    /* production: true,
     apiUri:'http://localhost:3000/api/v1',
     auth0:
     {
@@ -11,6 +11,6 @@ export const environment = {
         scope: 'openid profile picture email',
       }
     }
-  
+   */
   };
   

@@ -27,13 +27,11 @@ export class PlayerStatsComponent implements OnInit {
   
     this.http.get<any>(apiUrl, options).subscribe(
       (response) => {
-        console.log(response); // Log the response to see the data structure
-        // Assuming the player data is under the 'response' key in the API response
-        // You may need to adjust this based on the actual structure of the response
-        this.playerStats = response.response; // Assign the fetched player stats data to the playerStats array
+        console.log(response); 
+        this.playerStats = response.response; 
       },
       (error) => {
-        console.error(error); // Log any errors if the API call fails
+        console.error(error);// Log any errors 
       }
     );
   }

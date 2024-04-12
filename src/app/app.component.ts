@@ -10,7 +10,7 @@ import { MatMenuModule } from '@angular/material/menu';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TeamInfo';
+  title = 'PremierLeague';
 
   isAuthenticated$ = this.auth.isAuthenticated$
 

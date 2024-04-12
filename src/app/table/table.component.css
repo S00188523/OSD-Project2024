@@ -1,4 +1,3 @@
-/* General styles */
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -6,8 +5,8 @@
 }
 
 .table-container {
-  overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
-  margin-bottom: 500px; /* Add some bottom margin */
+  overflow-x: auto; 
+  margin-bottom: 500px; 
 }
 
 .league-table {
@@ -26,9 +25,9 @@
 }
 
 .club-logo {
-  width: 36px; /* Adjust logo size as needed */
-  height: 36px; /* Adjust logo size as needed */
-  margin-right: 8px; /* Adjust margin as needed */
+  width: 36px; 
+  height: 36px; 
+  margin-right: 8px; 
 }
 
 .league-table__team {
@@ -40,19 +39,19 @@
 .league-table th,
 .league-table td {
   text-align: center;
-  padding: 8px; /* Adjust padding as needed */
-  border-bottom: 1px solid #eeeeee; /* Thin border between rows */
+  padding: 8px; 
+  border-bottom: 1px solid #eeeeee; 
 }
 
 .league-table th {
-  font-size: 14px; /* Adjust font size as needed */
+  font-size: 14px; 
 }
 
 .table-heading {
-  font-size: 24px; /* Adjust the font size as needed */
-  font-weight: bold; /* Make the text bold */
-  color: #37003c; /* Set the text color */
-  margin-bottom: 16px; /* Add some bottom margin for spacing */
+  font-size: 24px; 
+  font-weight: bold; 
+  color: #37003c; 
+  margin-bottom: 16px; 
   margin-left: 5px;
 }
 
@@ -66,11 +65,11 @@
 
 
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
   .league-table th,
   .league-table td {
-    font-size: 12px; /* Adjust font size for smaller screens */
-    padding: 6px; /* Adjust padding for smaller screens */
+    font-size: 12px; 
+    padding: 6px; 
   }
 }

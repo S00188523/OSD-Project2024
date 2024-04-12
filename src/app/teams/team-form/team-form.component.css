@@ -1,6 +1,6 @@
 .team-form-card {
-  width: 90%; /* Adjust the width for smaller screens */
-  max-width: 400px; /* Set a maximum width for larger screens */
+  width: 90%; 
+  max-width: 400px; 
   margin: 20px auto;
 }
 
@@ -17,11 +17,11 @@
 .button-container {
   margin-top: 16px;
   display: flex;
-  flex-direction: column; /* Adjust the button layout for smaller screens */
+  flex-direction: column; 
 }
 
 .button-container button {
-  margin-bottom: 8px; /* Add some space between buttons */
+  margin-bottom: 8px; 
 }
 
 .footerCorporate {
@@ -55,9 +55,8 @@
   height: auto;
 }
 
-/* Media queries for responsiveness */
 @media (max-width: 600px) {
   .team-form-card {
-    width: 90%; /* Adjust the width for smaller screens */
+    width: 90%; 
   }
 }

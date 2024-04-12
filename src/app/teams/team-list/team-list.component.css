@@ -29,11 +29,11 @@
   .linkbtns {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px; /* Add some bottom margin to separate the buttons from the cards */
+    margin-bottom: 20px;
   }
   
   .linkbtns a {
-    margin: 0 10px; /* Adjust the spacing between buttons if needed */
+    margin: 0 10px; 
   }
 
   .footerCorporate {
